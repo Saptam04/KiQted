@@ -24,7 +24,7 @@ std::string* DataFetcher::getData(const std::string& URL)
         // curl_easy_setopt(curl, CURLOPT_USERAGENT, "curl/7.42.0");     /**< Sometimes neeed */
 
         struct curl_slist* headers = NULL;
-        headers = curl_slist_append(headers, "X-Auth-Token: 6b3a5ada01f2423fa4355f2559549d11");
+        headers = curl_slist_append(headers, "X-Auth-Token: your_very_own_access_token");
         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writeFunction);
